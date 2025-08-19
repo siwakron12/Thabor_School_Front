@@ -1,0 +1,70 @@
+import { useEffect, useState } from "react";
+import Footer from "../compornent/Footer";
+import Nav from "../compornent/Nav";
+import HTMLReactParser from 'html-react-parser';
+import {Helmet} from "react-helmet";
+import PulseLoader from 'react-spinners/PulseLoader';
+export default function MusicPage() {
+    let [man, setMan] = useState(null)
+    const apiUrl = process.env.REACT_APP_API_URL;
+    useEffect(() => {
+
+        fetchItem()
+    }, []);
+    const fetchItem = async () => {
+        try {
+            const response = await fetch(`${apiUrl}schoolsymbol/posts/`);
+            if (!response.ok) {
+                throw new Error('Failed to fetch image names');
+            }
+            const data = await response.json();
+            console.log(data);
+            setMan(data)
+
+        } catch (error) {
+            console.error('Error fetching image names:', error);
+        }
+    };
+    function formatDate(timestamp) {
+        const date = new Date(timestamp);
+        const day = String(date.getUTCDate()).padStart(2, '0');
+        const month = String(date.getUTCMonth() + 1).padStart(2, '0'); // getUTCMonth() is zero-based
+        const year = date.getUTCFullYear();
+        return `${day}/${month}/${year}`;
+    }
+    if (!man) {
+        return (
+            <div>
+                <Nav />
+                <div className="w-3/4 mx-auto flex justify-center items-center mt-4 h-screen">
+                <PulseLoader color="rgba(255, 0, 0, 1)"/>
+                </div>
+                <Footer />
+            </div>
+        );
+    }
+    return <>
+        <div className="flex flex-col min-h-screen">
+        <Helmet>
+                <meta charSet="utf-8" />
+                <title>สัญลักษณ์/เพลงประจำโรงเรียน</title>
+             
+                </Helmet>
+        <Nav />
+        <div className="w-full lg:w-3/4 mx-auto p-2">
+            <h1 className="text-4xl text-red-600 mt-4">สัญลักษณ์/เพลงประจำโรงเรียน</h1>
+            {man.map(item => (
+                <div key={item.id} className='w-full p-2 border-gray-600 border-2 relative'>
+                    <div className="">{HTMLReactParser(item.content)}</div>
+                    <p className='absolute bottom-1 right-1'>{formatDate(item.created_at)} </p>
+                </div>
+            ))}
+        </div>
+        <div className="mt-auto">
+        <Footer />
+        </div>
+       
+        </div>
+       
+    </>
+}

@@ -1,0 +1,13 @@
+.custom-lightgallery {
+    display: flex;
+    flex-wrap: wrap;
+    border:1px solid gray;
+    border-radius: 10px;
+ 
+
+}
+
+.custom-lightgallery a {
+    margin: .5rem;
+}
+
