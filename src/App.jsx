@@ -61,8 +61,8 @@ function App() {
       </Helmet>
 
       {isPopupOpen && (
-        <div className='fixed inset-0 z-[9999] flex items-center  w-screen h-fit  justify-center  px-3 py-3 backdrop-blur-sm sm:px-5 sm:py-5'>
-          <div className='relative flex   w-full max-w-6xl flex-col overflow-hidden rounded-[30px] h-fit   '>
+        <div className='fixed inset-0 z-[9999] flex items-center justify-center px-3 py-3 backdrop-blur-sm sm:px-5 sm:py-5 overflow-auto'>
+          <div className='relative flex w-full max-w-6xl flex-col rounded-[30px] max-h-[90vh] sm:max-h-[80vh] overflow-auto'>
           
 
             <div className=''>
@@ -70,16 +70,14 @@ function App() {
                 <div className='w-full max-w-3xl'>
                   <div className='overflow-hidden rounded-[28px] border border-white/70 bg-white shadow-[0_16px_40px_rgba(120,84,20,0.18)]'>
                     <img
-                      src='https://cdn.discordapp.com/attachments/1247903036920168539/1500738514105532636/Screenshot_2026-05-04_at_12.58.20.png?ex=69f98728&is=69f835a8&hm=351b8d06957e27bbbccfa7ac4dc9d1b10f505e586c28d0f9ec118056d14c2268&'
+                      src='https://cdn.discordapp.com/attachments/1247903036920168539/1500818848868335626/Screenshot_2026-05-04_at_18.17.30.png?ex=69f9d1f9&is=69f88079&hm=1dc9c7c07db84d0adf5911a4b8ee3fe18b8732587590811fd272a91dbf1c6ab8&'
                       alt='โรงเรียนบ้านท่าบ่อ'
-                      className='h-full w-full object-contain'
+                      className='w-full h-auto  max-h-[60vh] '
                     />
                   </div>
 
                   <div className='mt-5 text-center text-[#6d4f1a]'>
-                    <p className='font-thai text-sm font-semibold tracking-[0.35em] text-[#9a7728]'>
-                      ประกาศจากโรงเรียน
-                    </p>
+                   
                     <h2 className='mt-2 font-thai text-3xl font-bold sm:text-4xl'>
                       ยินดีต้อนรับสู่เว็บไซต์โรงเรียนบ้านท่าบ่อ
                     </h2>
@@ -93,17 +91,16 @@ function App() {
                   <div className='rounded-[28px] border border-[#ead9ab] bg-white px-5 py-6 shadow-[0_12px_30px_rgba(126,88,15,0.1)] sm:px-6 sm:py-7'>
                   
 
-                    <div className='flex space-x-4'>
-              
-                      <a href = "https://forms.gle/njESQqyCnqMSiMJH6" target="_blank" rel="noopener noreferrer" className='mt-6 w-full rounded-full bg-gradient-to-r from-[#f0b43b] to-[#d68b1f] px-5 py-3.5 font-thai text-lg font-bold text-white shadow-[0_10px_24px_rgba(214,139,31,0.35)] transition hover:brightness-105 text-center'>
-                      ลงนามถวายพระพร
+                    <div className='flex flex-col sm:flex-row sm:space-x-4 space-y-4 sm:space-y-0'>
+                      <a href="https://forms.gle/njESQqyCnqMSiMJH6" target="_blank" rel="noopener noreferrer" className='w-full rounded-full bg-gradient-to-r from-[#f0b43b] to-[#d68b1f] px-5 py-3.5 font-thai text-lg font-bold text-white shadow-[0_10px_24px_rgba(214,139,31,0.35)] transition hover:brightness-105 text-center'>
+                        ลงนามถวายพระพร
                       </a>
-                    
-                              <button
+
+                      <button
                         type='submit'
-                        className='mt-6 w-full rounded-full bg-gradient-to-r from-[#f0b43b] to-[#d68b1f] px-5 py-3.5 font-thai text-lg font-bold text-white shadow-[0_10px_24px_rgba(214,139,31,0.35)] transition hover:brightness-105'
+                        className='w-full rounded-full bg-gradient-to-r from-[#f0b43b] to-[#d68b1f] px-5 py-3.5 font-thai text-lg font-bold text-white shadow-[0_10px_24px_rgba(214,139,31,0.35)] transition hover:brightness-105'
                       >
-                      เข้าสู่เว็บไซต์
+                        เข้าสู่เว็บไซต์
                       </button>
                     </div>
 
@@ -136,7 +133,7 @@ function App() {
           pageId="100057064105468"
           appId="495279939819580"
 
-        />,
+        />
         <div className='mt-auto'>
           <Footer />
 
