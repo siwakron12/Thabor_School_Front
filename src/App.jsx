@@ -70,7 +70,7 @@ function App() {
                 <div className='w-full max-w-3xl'>
                   <div className='overflow-hidden rounded-[28px] border border-white/70 bg-white shadow-[0_16px_40px_rgba(120,84,20,0.18)]'>
                     <img
-                      src='https://www.nstda.or.th/agritec/wp-content/uploads/2024/05/Banner_%E0%B8%A7%E0%B8%B1%E0%B8%99%E0%B8%89%E0%B8%B1%E0%B8%95%E0%B8%A3%E0%B8%A1%E0%B8%87%E0%B8%84%E0%B8%A567-07_0-scaled.jpg'
+                      src='https://cdn.discordapp.com/attachments/1247903036920168539/1500738514105532636/Screenshot_2026-05-04_at_12.58.20.png?ex=69f98728&is=69f835a8&hm=351b8d06957e27bbbccfa7ac4dc9d1b10f505e586c28d0f9ec118056d14c2268&'
                       alt='โรงเรียนบ้านท่าบ่อ'
                       className='h-full w-full object-contain'
                     />
@@ -96,7 +96,7 @@ function App() {
                     <div className='flex space-x-4'>
               
                       <a href = "https://forms.gle/njESQqyCnqMSiMJH6" target="_blank" rel="noopener noreferrer" className='mt-6 w-full rounded-full bg-gradient-to-r from-[#f0b43b] to-[#d68b1f] px-5 py-3.5 font-thai text-lg font-bold text-white shadow-[0_10px_24px_rgba(214,139,31,0.35)] transition hover:brightness-105 text-center'>
-                      ลงทะเบียน
+                      ลงนามถวายพระพร
                       </a>
                     
                               <button

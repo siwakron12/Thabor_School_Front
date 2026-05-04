@@ -6,6 +6,7 @@ import PulseLoader from 'react-spinners/PulseLoader';
 
 export default function ActivityImg() {
     const apiUrl = process.env.REACT_APP_API_URL;
+    console.log(apiUrl)
     const [man, setMan] = useState(null)
     useEffect(() => {
 
